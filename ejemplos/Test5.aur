@@ -1,0 +1,17 @@
+inicio:
+    crear cadena numeroSecreto = "7";
+    crear entero intento;
+    crear booleano adivinado = falso;
+    
+    mientras adivinado == falso:
+        escribir "Adivina el número (1-10):";
+        leer intento;
+        
+        si intento == numeroSecreto entonces:
+            escribir "¡Correcto!";
+            adivinado = verdadero;
+        sino:
+            escribir "Intenta de nuevo";
+        fin;
+    fin;
+fin;

@@ -1,0 +1,14 @@
+inicio:
+    escribir "Temperatura en Celsius:";
+    crear flotante tempCelsius;
+    leer tempCelsius;
+    
+    crear flotante tempFahrenheit = celsiusAFahrenheit(tempCelsius);
+    escribir "En Fahrenheit es: ";
+    escribir tempFahrenheit;
+fin;
+
+funcion celsiusAFahrenheit(flotante celsius):
+    crear flotante fahrenheit = (celsius * 9/5) + 32;
+    retornar fahrenheit;
+fin;
