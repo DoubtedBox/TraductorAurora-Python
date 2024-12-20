@@ -9,4 +9,35 @@ Aurora es un lenguaje de programación diseñado para estudiantes hispanohablant
 * Soporte para funciones y arreglos
 * Manejo de entrada/salida básica
 # Uso
-Una vez descargado ejecuta el archivo "main.py" en el cual se te pedira ingresar un archivo .aur (extensión del lenguaje), una vez traducido se te devolvera un archivo denominado "output.py" el cual tendra el codigo traducido.
+1. Una vez descargado el proyecto, ejecuta el archivo main.py
+2. El programa te pedirá ingresar la ruta de un archivo con extensión .aur
+3. El compilador traducirá el código y generará un archivo output.py con el código Python equivalente
+
+# Ejemplo de uso
+
+1. Crea un archivo hola_mundo.aur:
+```  
+inicio:
+    escribir "¡Hola desde Aurora!";
+fin;
+```
+2. Ejecuta el archivo principal:
+```ubuntu
+python main.py
+```
+
+3. Ingresa la ruta de tu archivo cuando se te solicite:
+```
+Ingrese el archivo:
+> hola_mundo.aur
+```
+
+4. El compilador generará un archivo output.py con el siguiente contenido:
+```python
+print(f'¡Hola desde Aurora!')
+```
+
+5. Puedes ejecutar el resultado:
+```
+python output.py
+```
