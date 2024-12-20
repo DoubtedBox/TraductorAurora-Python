@@ -9,7 +9,6 @@ class TraductorPythonListener(grammarProyectoListener):
     def __init__(self):
         self.python_code = ""
         self.indent_level = 0
-        self.declared_variables = {"main": set()}
         self.thereIsSquare = False
     def _indent(self):
         return "    " * self.indent_level
@@ -173,11 +172,13 @@ class TraductorPythonListener(grammarProyectoListener):
         # Obtener todos los términos en la expresión
         for i in range(expr.getChildCount()):
             child = expr.getChild(i)
+            
             if child.getText() == '+':
                 continue  # Ignorar el operador '+'
             
             # Procesar el término para asegurarnos de que esté en el formato correcto
             term_text = child.getText()
+            print(term_text)
             term_text = self.replace_function_calls(term_text)
             # Si el término es una cadena (por ejemplo, una literal), eliminar las comillas
             if term_text.startswith('"') and term_text.endswith('"'):
@@ -254,7 +255,9 @@ def loadFile(link):
     return content
 
 def main():
-    codigo = loadFile("Test.txt")
+    print("Ingrese el nombre de su archivo: ")
+    archivo = input("> ")
+    codigo = loadFile(archivo)
     print(f'Codigo: \n{codigo}')
     lexer = grammarProyectoLexer(InputStream(codigo))
     stream = CommonTokenStream(lexer)

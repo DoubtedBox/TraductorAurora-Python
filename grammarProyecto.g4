@@ -159,4 +159,4 @@ tensor_dimensions: (LBRACKET CONT? RBRACKET)+;
 tensor_init: LBRACKET literal (COMMA literal)* RBRACKET 
            | LBRACKET tensor_init (COMMA tensor_init)* RBRACKET;
 
-tensor_acces: ID LBRACKET (CONT | FLOAT | ID) RBRACKET (LBRACKET (CONT | FLOAT | ID) RBRACKET)*;
+tensor_acces: ID LBRACKET (CONT | FLOAT | ID | expr) RBRACKET (LBRACKET (CONT | FLOAT | ID | expr) RBRACKET)*;

@@ -1,0 +1,6 @@
+inicio:
+    // Este programa cuenta del 1 al 5
+    para i = 1 hasta 5 incremento:
+        escribir i;
+    fin;
+fin;

@@ -8,4 +8,5 @@ Aurora es un lenguaje de programación diseñado para estudiantes hispanohablant
 * Estructuras de control fundamentales (si-entonces, para, mientras)
 * Soporte para funciones y arreglos
 * Manejo de entrada/salida básica
-# Instalación
+# Uso
+Una vez descargado ejecuta el archivo "main.py" en el cual se te pedira ingresar un archivo .aur (extensión del lenguaje), una vez traducido se te devolvera un archivo denominado "output.py" el cual tendra el codigo traducido.
