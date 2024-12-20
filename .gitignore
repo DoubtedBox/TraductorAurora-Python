@@ -1,0 +1,13 @@
+# Carpetas pregeneradas
+__pycache__/
+.antlr/
+
+# Archivos pregenerados
+*.swo
+*.swp
+
+# Archivos personales de prueba
+expectedOutput.py
+output.py
+Test.txt
+Test2.txt
