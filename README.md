@@ -6,7 +6,7 @@ Aurora es un lenguaje de programación diseñado para estudiantes hispanohablant
 # Características
 * Sintaxis completamente en español
 * Reglas simples y claras
-* Compila a Python
+* Traduce a Python
 * Incluye tipos de datos básicos (entero, flotante, cadena, booleano)
 * Estructuras de control fundamentales (si-entonces, para, mientras)
 * Soporte para funciones y arreglos
