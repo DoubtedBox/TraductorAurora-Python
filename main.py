@@ -178,7 +178,7 @@ class TraductorPythonListener(grammarProyectoListener):
             
             # Procesar el término para asegurarnos de que esté en el formato correcto
             term_text = child.getText()
-            print(term_text)
+
             term_text = self.replace_function_calls(term_text)
             # Si el término es una cadena (por ejemplo, una literal), eliminar las comillas
             if term_text.startswith('"') and term_text.endswith('"'):
@@ -237,10 +237,11 @@ class TraductorPythonListener(grammarProyectoListener):
         
         if self.thereIsSquare:
             self.python_code = f'import math \n\n {self.python_code}'
-        # Método final para guardar o imprimir código
-        print(self.python_code)
         
-        # Opcionalmente, guardar en archivo
+        #print(self.python_code)
+        print("Codigo traducido con exito!")
+
+        # Guardar el codigo traducido en output.py
         with open('output.py', 'w') as f:
             f.write(self.python_code)
     
@@ -250,6 +251,7 @@ class TraductorPythonListener(grammarProyectoListener):
             self.thereIsSquare = True  # Se encontró una llamada a raizCuadrada
             return expression.replace("raizCuadrada", "math.sqrt")
         return expression
+    
 def loadFile(link):
     content = open(link, "r").read()
     return content
@@ -258,13 +260,14 @@ def main():
     print("Ingrese el nombre de su archivo: ")
     archivo = input("> ")
     codigo = loadFile(archivo)
-    print(f'Codigo: \n{codigo}')
+    print("Archivo leido con exito.")
+    #print(f'Codigo: \n{codigo}')
     lexer = grammarProyectoLexer(InputStream(codigo))
     stream = CommonTokenStream(lexer)
     parser = grammarProyectoParser(stream)
     tree = parser.program()
     
-    print(tree.toStringTree(recog=parser))
+    #print(tree.toStringTree(recog=parser))
     
     # Crear una instancia de ParseTreeWalker y ProyectoCodeListener
     walker = ParseTreeWalker()

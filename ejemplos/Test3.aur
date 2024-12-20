@@ -1,13 +1,10 @@
 inicio:
     // Creando un arreglo de 5 números
-    crear entero[5] calificaciones = [85, 90, 78, 92, 88];
+    crear entero[] calificaciones = [85, 90, 78, 92, 88];
     
     // Mostrando cada calificación
     para i = 0 hasta 4 incremento:
-        escribir "Calificación ";
         crear entero posicion = i + 1;
-        escribir posicion;
-        escribir ": ";
-        escribir calificaciones[i];
+        escribir "Calificación " + posicion + ": " + calificaciones[i];
     fin;
 fin;
