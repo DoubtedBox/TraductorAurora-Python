@@ -1,3 +1,6 @@
+# Autores
+* Can Cime Rodrigo Alexander
+* Rangel Alpuche Ricardo Francisco
 # Aurora
 Aurora es un lenguaje de programación diseñado para estudiantes hispanohablantes que están comenzando en el mundo de la programación. Su sintaxis en español y reglas simples lo hacen ideal para aprender conceptos fundamentales de programación.
 # Características
